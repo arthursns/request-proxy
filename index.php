@@ -12,7 +12,7 @@
   <h2>
   Página bloqueada pelo nosso firewall, favor solicitar permissão no formulário abaixo:
   </h2>
-  <form action="models/solicitacaoModel.php" method="post" data-toggle="validator">
+  <form action="model/solicitacaoModel.php" method="post" data-toggle="validator">
   <div class="form-group">
     <label for="formGroupExampleInput">Nome do solicitante</label>
     <input type="text" class="form-control" id="formGroupExampleInput1" name="nome" required>
