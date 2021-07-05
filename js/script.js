@@ -19,3 +19,12 @@ $.ajax({
     }
 });
 }
+$(function() {
+    $(document).on('click','#status',function (e) {
+      if($(this).is(":checked")){
+        $(".status1").addClass('d-none');
+      }else{
+        $(".status1").removeClass('d-none');
+      }
+    });
+  });

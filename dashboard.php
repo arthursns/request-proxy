@@ -16,9 +16,9 @@ require_once 'protect.php';
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </head>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
     <body>
     <?php include 'sidebarTop.php';?>
     <table class="table table-striped">
@@ -31,7 +31,7 @@ require_once 'protect.php';
         <th scope="col">IP</th>
         <th scope="col">URL</th>
         <th scope="col">
-        <input type="checkbox" class="make-switch" id="price_check" name="pricing" data-on-color="primary" data-off-color="info" value="true">
+        <input type="checkbox" id="status">
         </th>
         <th scope="col"></th>
         </tr>
@@ -40,7 +40,11 @@ require_once 'protect.php';
     <?php 
     $consulta = $pdo->query("SELECT * FROM liberacao;");
     while ($dado = $consulta->fetch(PDO::FETCH_ASSOC)) {?>
-        <tr>
+        <tr <?php
+        if($dado['statusSolicitacao'] == 1){
+        echo 'class="status1"';}
+        else{ echo 'class="status0"';}
+        ?>>
         <th scope="row" id="dvConteudo"></th>
         <td style="text-align: center"><?php echo $dado['idSolicitacao']?></td>
         <td><?php echo $dado['nomeSolicitacao']?></td>
