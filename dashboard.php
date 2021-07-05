@@ -31,7 +31,9 @@ require_once 'protect.php';
         <th scope="col">IP</th>
         <th scope="col">URL</th>
         <th scope="col">
-        <input type="checkbox" id="status">
+        <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="status">
+        </div>
         </th>
         <th scope="col"></th>
         </tr>
