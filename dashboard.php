@@ -32,7 +32,7 @@ require_once 'protect.php';
         <th scope="col">URL</th>
         <th scope="col">
         <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="status">
+        <input class="form-check-input" type="checkbox" id="status" checked>
         </div>
         </th>
         <th scope="col"></th>
@@ -44,7 +44,7 @@ require_once 'protect.php';
     while ($dado = $consulta->fetch(PDO::FETCH_ASSOC)) {?>
         <tr <?php
         if($dado['statusSolicitacao'] == 1){
-        echo 'class="status1"';}
+        echo 'class="status1 d-none"';}
         else{ echo 'class="status0"';}
         ?>>
         <th scope="row" id="dvConteudo"></th>
