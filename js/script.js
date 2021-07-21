@@ -8,7 +8,7 @@ if(status == 1){
 $.ajax({
     type: 'POST',
     dataType: 'json',
-    url: 'model/alterStatus.php',
+    url: '../model/alterStatus.php',
     async: true,
     data: {
         id: idSolicitacao,
